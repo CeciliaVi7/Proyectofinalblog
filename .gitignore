@@ -1,4 +1,4 @@
-#Ignorar estos archivos
+# No subir al repo: entornos virtuales, media, claves, debugs, base de datos
 
 proyecto/generate_key.py
 venv
