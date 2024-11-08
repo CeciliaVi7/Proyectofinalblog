@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from django.contrib.auth import views as auth_views
+from django.contrib.auth.views import PasswordResetConfirmView
+
 
 
 urlpatterns = [
@@ -28,6 +31,9 @@ urlpatterns = [
     path('signup/', views.SignUpView.as_view(), name='signup'),
     
     path('comments/', views.comment_section, name='comment_section'),
+
+    #cerrar sesion
+    path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
 
 
 ]

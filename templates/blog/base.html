@@ -41,8 +41,15 @@
             {% if request.user.is_staff %}
               <li><a class="dropdown-item" href={% url 'crear_articulo' %}>Crear Artículo</a></li>
             {% endif %}
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href={% url 'logout' %}>Salir</a></li> 
+            <li>
+              <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                  {% csrf_token %}
+                  <button type="submit" class="dropdown-item" style="background:none; border:none; cursor:pointer;">
+                      Salir
+                  </button>
+              </form>
+          </li>
+          
           </ul>
         </section>
       {% else %}

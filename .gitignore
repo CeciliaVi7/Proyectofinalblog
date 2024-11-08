@@ -1,9 +1,12 @@
+#Ignorar estos archivos
+
 proyecto/generate_key.py
 venv
-pyc
+*.pyc
 __pycache__/
 .DS_Store
 *.db
 local_settings.py
 media
 db.sqlite3
+.env  
